@@ -2,6 +2,14 @@
     box-sizing: border-box;
 }
 
-.Main {
-    
+.app  {
+    margin-left: 20px;
+}
+
+.main {
+    margin-top: 15px;
+}
+
+.main--countryinfo {
+        margin-top: 15px;
 }

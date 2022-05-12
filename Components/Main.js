@@ -15,31 +15,20 @@ export default function Main(props) {
 //    ShowData();
     console.log(Object.keys(props.capital))
     return (
-        <div className="main">capital
-            <div>Country: {props.name}</div>
-            <div>Currency: {Object.keys(props.currency)[0]}</div>
-            <div>Capital: {props.capital}</div>
+        <div className="main">
+            <div className="main--selection">
+                <select>
+                    <option value="Select">Select</option>
+                    <option value="Finland">Finland</option>
+                    <option value="Sweden">Sweden</option>
+                    <option value="Norway">Norway</option>
+                </select>
+            </div>
+            <div className="main--countryinfo">
+                <div>Country: {props.name}</div>
+                <div>Currency: {Object.keys(props.currency)[0]}</div>
+                <div>Capital: {props.capital}</div>
+            </div>    
         </div>
     )
-/*    
-            <div>currency: {props.currency}</div>
-
-return (
-        <RetrieveData />
-    )*/
-/*    return (
-        <div>
-            Main
-            <ShowCountryInfo />
-        </div>
-        <div className="Main">
-            {data.map(place =>
-                <Place
-                    key={place.title}
-                    p={place}
-                />
-            )}
-        </div>
-
-    )*/
 }
