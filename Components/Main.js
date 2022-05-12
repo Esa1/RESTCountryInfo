@@ -2,14 +2,15 @@ import React from "react"
 //import Place from "./Place"
 //import data from "../data"
 import ShowCountryInfo from "./ShowCountryInfo"
-import RetrieveData from "./RetrieveData"
+//import RetrieveData from "./RetrieveData"
 
-/*function ShowData() {
-    let url = "https://restcountries.com/v3.1/name/finland?fullText=true";
+function RetrieveData(country) {
+    console.log(country)
+    let url = "https://restcountries.com/v3.1/name/" + country + "?fullText=true";
     $.getJSON(url, function(data, status) {
         console.log(data)
     })
-}*/
+}
 
 export default function Main(props) {
 //    ShowData();
@@ -17,7 +18,9 @@ export default function Main(props) {
     return (
         <div className="main">
             <div className="main--selection">
-                <select>
+                <select
+                    onChange={e => RetrieveData(e.target.value)}
+                >
                     <option value="Select">Select</option>
                     <option value="Finland">Finland</option>
                     <option value="Sweden">Sweden</option>
