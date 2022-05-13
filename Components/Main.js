@@ -1,6 +1,5 @@
 import React from "react"
 import { useState } from 'react';
-import ShowCountryInfo from "./ShowCountryInfo"
 
 export default function Main() {
     const [country, setCountry] = useState('Select');
@@ -11,12 +10,12 @@ export default function Main() {
     });
     
     function RetrieveData(country) {
-        console.log(country)
+//        console.log(country)
         setCountry(country)
         let url = "https://restcountries.com/v3.1/name/" + country + "?fullText=true";
         $.getJSON(url, function(data, status) {
-            console.log(data[0])
-            console.log(Object.keys(data[0].currencies)[0])
+//            console.log(data[0])
+//            console.log(Object.keys(data[0].currencies)[0])
             setInfo({
                 country: data[0].name.common,
                 currency: Object.keys(data[0].currencies)[0],
