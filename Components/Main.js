@@ -30,8 +30,7 @@ export default function Main() {
             <div className="main--selection">
                 <select
                     value={country}
-                    onChange={e => RetrieveData(e.target.value)}
-                >
+                    onChange={e => RetrieveData(e.target.value)}>
                     <option value="Select">Select</option>
                     <option value="Finland">Finland</option>
                     <option value="Sweden">Sweden</option>
@@ -40,10 +39,20 @@ export default function Main() {
             </div>
 
             <div className="main--countryinfo">
-                <div>Country: {info.country}</div>
-                <div>Currency: {info.currency}</div>
-                <div>Capital: {info.capital}</div>
+                <div className="main--infoitem">
+                    <div className="main--infodescr">Country:</div> 
+                    <div>{info.country}</div>
+                </div>
+                <div className="main--infoitem">
+                    <div className="main--infodescr">Currency:</div> 
+                    <div>{info.currency}</div>
+                </div>
+                <div className="main--infoitem">
+                     <div className="main--infodescr">Capital:</div> 
+                    <div>{info.capital}</div>
+                </div>
             </div>
         </div>
     )
+
 }

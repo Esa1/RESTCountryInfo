@@ -11,5 +11,16 @@
 }
 
 .main--countryinfo {
-        margin-top: 15px;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.main--infoitem {
+    display: flex;
+    flex-direction: row;
+}
+
+.main--infodescr {
+    width: 100px;
 }
